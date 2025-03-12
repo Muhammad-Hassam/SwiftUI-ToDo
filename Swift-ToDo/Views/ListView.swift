@@ -46,6 +46,7 @@ struct ListView: View {
     NavigationView {
         ListView()
     }
+    .navigationViewStyle(StackNavigationViewStyle())
     .environmentObject(ListViewModel())
 }
 

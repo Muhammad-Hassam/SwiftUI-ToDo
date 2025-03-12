@@ -43,9 +43,9 @@ struct AddView: View {
                 TextField("Type Something here...", text:$textFieldText)
                     .padding(.horizontal)
                     .frame(height: 55)
-                    .background(Color("TextFieldClr"))
+                    .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(10)
-                    .foregroundColor(Color.black)
+//                    .foregroundColor(Color.black)
                 Button(action: {
                     saveTodo()
                 }, label: {
@@ -67,5 +67,6 @@ struct AddView: View {
 #Preview {
     NavigationView {
         AddView()
-    }.environmentObject(ListViewModel())
+    } .preferredColorScheme(.dark)
+        .environmentObject(ListViewModel())
 }
